@@ -2,6 +2,78 @@
 Date : 20 November 2019
 Website : https://colourcart.000webhostapp.com/ */
 
+/* Sets margins, padding and fonts */
+/* Default is set by the browser */
+body,ul,li,h1,h2,a{
+  margin: 0 0 0 0;
+  padding: 0px;
+  font-family: arial;
+}
+
+/* Styles for horizontal rules */
+hr{
+  border-top: 1.5px solid #6f6975;
+  /* box-shadow: 0 20px 20px -20px #333; */
+}
+
+/* Set maxiumum width of content container */
+/* Center the content container */
+body{
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+/* Format the Heading header1 */
+/* Deviation from default colour scheme with 
+  light shadow effect added */
+header h1{
+  margin-top: 45px;
+  font-size: 55px;
+  color: #1f1f1f;
+  text-shadow: 1px 1px rgb(238, 238, 238);
+}
+
+.reviews ol{
+  padding: 20px;
+  margin: 0;
+}
+
+.reviews li{
+  display: inline-block;
+  margin-right: 55px;
+}
+
+body > section.reviews > ol > li.number_of_reviews{
+  font-weight: 700 ;
+  color:#c9c9c9;
+}
+
+.star{
+  transform: scale(1.4,1.4);  /* Scales size of the icon */
+  margin-right:7px;
+}
+
 .checked {
-    color: #101010;
-  }
+    color: #1f1f1f;
+}
+  
+.dot {
+  height: 40px;
+  width: 40px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  margin: 10px;
+}
+
+.btn {
+  border: none; /* Remove borders */
+  color: white; /* Add a text color */
+  padding: 14px 70px; /* Add some padding */
+  cursor: pointer; /* Add a pointer cursor on mouse-over */
+  border-radius: 35px;
+}
+
+.cart {background-color: black;} /* Green */
+.cart:hover {background-color: rgb(32, 32, 32);}
+
