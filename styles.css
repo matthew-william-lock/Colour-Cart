@@ -48,6 +48,48 @@ body > section.reviews > ol > li.number_of_reviews{
   color:#c9c9c9;
 }
 
+main ol{
+  padding: 0;
+  margin: 0;
+  margin-left: 5px;
+}
+
+/* Changes main dsiplay list items to 
+inline block display style and changes margins 
+and padding */
+main li{
+  display: inline-block;
+  margin-right: 95px;
+}
+
+/* Discounted price styling */
+/* Increased font size, added shaddows */
+.discountedPrice{
+  color: #d15567;
+  font-size: 30px;
+  font-weight: 600;
+  text-shadow: 1px 1px rgb(238, 238, 238);
+  margin-left: 10px;
+}
+
+/* Original price styling */
+/* Increased font size, added shaddows */
+.originalPrice{
+  font-weight: 700 ;
+  font-size: 20px;
+  color:#c8c8c8;
+  text-shadow: 1px 1px rgb(238, 238, 238);
+}
+
+/* Discount percentage styling */
+.discount{
+  font-weight: 800 ;
+  font-size: 20px;
+  color:#c9c9c9;
+  text-shadow: 1px 1px rgb(238, 238, 238);
+
+}
+
 .star{
   transform: scale(1.4,1.4);  /* Scales size of the icon */
   margin-right:7px;
@@ -57,23 +99,99 @@ body > section.reviews > ol > li.number_of_reviews{
     color: #1f1f1f;
 }
   
+/* Dynamic sizing of dots */
+body > main > section{
+  max-width: 100%;
+  /* white-space: nowrap; */
+}
+
+/* Styling of dots */
 .dot {
-  height: 40px;
+  /* width: 5.5%; */
   width: 40px;
+  height: 40px;
   background-color: #bbb;
   border-radius: 50%;
   display: inline-block;
   margin: 10px;
+  cursor: pointer; /* Add a pointer cursor on mouse-over */
 }
 
+/* Format banner text
+  Added padding and font styling */
+body > main > h2.banner{
+  padding: 25px 25px;
+  font-weight: 300 ; /* Thinner font */
+  font-size: 18px;
+  text-shadow: 1px 1px rgb(238, 238, 238);
+}
+
+/* Format color selected text*/
+body > main > h2:nth-child(3){
+  font-size: 18px;
+  font-weight: 700 ; /* Slightly heavier font */
+  padding: 20px 10px;
+}
+
+/* Format selected colour */
+body > main > h2:nth-child(3) > span{
+  font-weight: 300 ; /* Thinner font */
+}
+
+/* Format size section */
+body > section.sizeSection{
+  padding: 5px 0;
+  margin-left:10px;
+}
+
+/* Format size guide text */
+body > section.sizeSection > h2{
+  padding: 10px 5px;
+  font-size: 15px;
+  font-weight: 900 ; /* Slightly heavier font */
+}
+
+/* PAdding for cart information */
+body > section.itemsDisplay{
+  padding: 10px 0;
+}
+
+/* Styling for rectangle showing number of items in cart */
+body > section:nth-child(5) > span{
+  border: 1px solid black;
+  padding: 20px 35px;
+  border-radius: 35px;
+  margin-right: 30px;
+  font-weight: 900 ; /* Slightly heavier font */
+  font-size: 20px;
+  text-shadow: 1px 1px rgb(187, 187, 187);/* Shaddow to make text look thicker */
+}
+
+/* Styling for the Add to Cart button */
 .btn {
-  border: none; /* Remove borders */
+  border: 1px solid black;
   color: white; /* Add a text color */
-  padding: 14px 70px; /* Add some padding */
+  padding: 20px 150px; /* Add some padding */
   cursor: pointer; /* Add a pointer cursor on mouse-over */
   border-radius: 35px;
+  font-weight: 900 ; /* Slightly heavier font */
+  font-size: 20px;
 }
 
+/* Hover effects styling */
 .cart {background-color: black;} /* Green */
 .cart:hover {background-color: rgb(32, 32, 32);}
 
+/* Horizontal line styling */
+hr{
+margin: 40px 0;
+}
+
+body > section:nth-child(7) > h2{
+  padding: 0 20px;
+  font-size: 15px;
+}
+
+footer{
+  font-size: 13px;
+}
