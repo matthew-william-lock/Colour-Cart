@@ -2,13 +2,15 @@
 Date : 20 November 2019
 Website : https://colourcart.000webhostapp.com/ */
 
+
 /* Sets margins, padding and fonts */
 /* Default is set by the browser */
 body,ul,li,h1,h2,a{
   margin: 0 0 0 0;
-  padding: 0px;
+  padding: 0px 15px;
   font-family: arial;
 }
+
 
 /* Styles for horizontal rules */
 hr{
@@ -19,8 +21,9 @@ hr{
 /* Set maxiumum width of content container */
 /* Center the content container */
 body{
-  max-width: 760px;
+  max-width: 720px;
   margin: 0 auto;
+  padding-left: 2px;
 }
 
 /* Format the Heading header1 */
@@ -87,7 +90,6 @@ main li{
   font-size: 20px;
   color:#c9c9c9;
   text-shadow: 1px 1px rgb(238, 238, 238);
-
 }
 
 .star{
@@ -105,6 +107,10 @@ body > main > section{
   /* white-space: nowrap; */
 }
 
+body > main > section >span{
+  margin: 5px;
+}
+
 /* Styling of dots */
 .dot {
   /* width: 5.5%; */
@@ -113,8 +119,36 @@ body > main > section{
   background-color: #bbb;
   border-radius: 50%;
   display: inline-block;
-  margin: 10px;
+  /* margin: 10px; */
   cursor: pointer; /* Add a pointer cursor on mouse-over */
+}
+
+.dot.outside{
+  position: relative;
+  width: 50px;
+  height: 50px;
+  background-color: white;
+  border : 1px solid white; 
+}
+
+.dot.inside{
+  position: absolute;
+  top:5px;
+  left:5px;
+}
+
+/* Add hover effect when hovering over colours */
+.dot.inside:hover{
+  position: absolute;
+  /* top:-4px; */
+}
+
+.dot.outside:hover{
+  top:-4px
+}
+
+.outside.clicked{
+  border : 1px solid blue;  
 }
 
 /* Format banner text
@@ -192,6 +226,352 @@ body > section:nth-child(7) > h2{
   font-size: 15px;
 }
 
+/* Styling for footer */
 footer{
   font-size: 13px;
 }
+
+/* Applied to elements to take preference */
+body,ul,li,h1,h2,a{
+  padding: 0px 15px;
+}
+
+/* Media Queries */
+/* Applied when a screen is found to be less than 550px wide */
+/* Used for responsive website when viewed on mobile */
+
+@media screen and (max-width: 680px){
+
+  /* Decrease padding of price items*/
+  main li{
+    display: inline-block;
+    margin-right: 60px;
+  }
+
+}
+
+@media screen and (max-width: 570px){
+ 
+  /* Decrease font size of heading */
+  header h1{
+    margin-top: 30px;
+    font-size: 35px;
+  }
+
+  /* Change padding of reviews items */
+  .reviews ol{
+    padding: 10px;
+  }
+
+  /* Remove margin for number of ratings */
+  .reviews li{
+    margin: 0;
+  }
+
+  /* Scale star icons down */
+  .star{
+    transform: scale(1.2,1.2);  /* Scales size of the icon */
+    margin-right:5px;
+  }
+
+  /* Decrease padding of price items*/
+  main li{
+    display: inline-block;
+    margin-right: 1px;
+  }
+
+  /* Decrease banner padding and text size*/
+  body > main > h2.banner{
+  padding: 20px;
+  font-size: 15px;
+}
+
+/* Decrease font size of price options*/
+.discountedPrice{
+  font-size: 20px;
+}
+.originalPrice{
+  font-size: 15px;
+}
+/* Discount percentage styling */
+.discount{
+  font-size: 15px;
+}
+
+/* Change padding */
+body > main > h2.banner{
+  padding: 10px 15px;
+}
+
+/* Change padding */
+body > main > h2:nth-child(3){
+  padding: 5px 10px;
+}
+
+body > main > section{
+  padding: 10px 0;
+}
+
+/* Change size of dots*/
+.dot.inside {
+  width: 25px;
+  height: 25px;
+}
+
+.dot.outside{
+  width: 35px;
+  height: 35px;
+}
+
+/* Change ormat color selected text*/
+body > main > h2:nth-child(3){
+  font-size: 15px;
+}
+
+/* Format selected colour */
+body > main > h2:nth-child(3) > span{
+  font-weight: 300 ; /* Thinner font */
+}
+
+/* Styling for rectangle showing number of items in cart */
+body > section:nth-child(5) > span{
+  padding: 10px 20px;
+  margin-right: 20px;
+  font-size: 15px;
+}
+
+/* Styling for the Add to Cart button */
+.btn {
+  padding: 10px 50px; /* Add some padding */
+  font-size: 15px;
+}
+
+/* Change margin for horizontal line */
+hr{
+  margin: 20px 0;
+}
+
+/* Styling for footer */
+footer{
+  font-size: 10px;
+} 
+
+/* End of media query */
+
+}
+
+@media screen and (max-width: 350px){ 
+  /* Decrease font size of heading */
+  header h1{
+    margin-top: 30px;
+    font-size: 28px;
+  }
+
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+  position: relative;
+  background-color: #fefefe;
+  margin: auto;
+  padding: 0;
+  border: 1px solid #888;
+  outline: 1px solid black;
+  outline-offset: -4px;
+  max-width:600px ;
+  width: 80%;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+  -webkit-animation-name: animatetop;
+  -webkit-animation-duration: 0.4s;
+  animation-name: animatetop;
+  animation-duration: 0.4s
+}
+
+.model-body{
+  display: inline-block;
+  background-color: orange;
+}
+
+/* Add Animation */
+@-webkit-keyframes animatetop {
+  from {top:-300px; opacity:0} 
+  to {top:0; opacity:1}
+}
+
+@keyframes animatetop {
+  from {top:-300px; opacity:0}
+  to {top:0; opacity:1}
+}
+
+/* The Close Button */
+.close {
+  color: black;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: darkgray;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.modal-header {
+  padding: 2px 16px;
+  background-color: white;
+  color: black;
+  text-align: right;
+}
+
+.modal-header h2{
+  display: inline-block;  
+  font-size: 20px;
+  font-weight: 400;
+  padding:15px;
+}
+
+.modal-body {padding: 2px 16px;}
+
+.modal-footer {
+  padding: 15px 16px;
+  background-color:white;
+  color: white;
+  text-align: right;
+  padding-right: 45px;
+}
+
+/* Minus plus buttons */
+
+#myModal > div > div.modal-body > p{
+  display: inline-block;
+  text-align: right;
+}
+
+#myModal > div > div.modal-body > div{
+  display: inline-block;
+  position: absolute;
+  /* top: 0; */
+  width: 45%;
+  margin: 30px 0;
+}
+
+#myModal > div > div.modal-body > p{
+  display: inline-block;
+  width: 45%;
+  height: 100%;
+  font-size: 30px;
+}
+
+div.qty{
+  display: inline-block;
+  margin: 30px 0;
+}
+
+.qty .count {
+  color: #000;
+  display: inline-block;
+  vertical-align: top;
+  font-size: 35px;
+  font-weight: 700;
+  line-height: 30px;
+  padding: 0 2px
+  ;min-width: 35px;
+  text-align: center;
+}
+.qty .plus {
+  cursor: pointer;
+  display: inline-block;
+  vertical-align: top;
+  color: white;
+  width: 40px;
+  height: 40px;
+  font: 40px/1 Arial,sans-serif;
+  text-align: center;
+  border-radius: 50%;
+  background-color: black;
+  }
+.qty .minus {
+  cursor: pointer;
+  display: inline-block;
+  vertical-align: top;
+  color: white;
+  width: 40px;
+  height: 40px;
+  font: 35px/1 Arial,sans-serif;
+  text-align: center;
+  border-radius: 50%;
+  background-clip: padding-box;
+  background-color: black;
+}
+div {
+  text-align: center;
+}
+.minus:hover{
+  background-color: #717fe0 !important;
+}
+.plus:hover{
+  background-color: #717fe0 !important;
+}
+/*Prevent text selection*/
+span{
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+input{  
+  border: 0;
+  width: 2%;
+}
+nput::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input:disabled{
+  background-color:white;
+}
+
+.modalButton {
+  border: none;
+  color: black;
+  padding: 15px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 12px;
+}
+
+.modalButton.agree{
+  background-color: #D7EAD6; 
+  border: 2px solid #B7C7B2;
+}
+
+.modalButton.cancel{
+  background-color: #F1CDCA; 
+  border: 2px solid #B79297;
+  
+}
+
+
+       
+

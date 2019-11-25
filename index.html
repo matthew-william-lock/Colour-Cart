@@ -1,10 +1,23 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <!-- Icon Library -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 <head>
+     <!-- Required meta tags -->
+     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Responsive design -->
+
+    <!-- Minus and plus buttons -->
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+
+
+     <!-- Bootstrap CSS -->
+    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> -->
+
     <link rel="stylesheet" href="styles.css">
     <title>HICKIES Originals</title>
 </head>
@@ -34,26 +47,26 @@
             <li class="discount"> 25% OFF</li>
         </ol>
         <h2 class="banner">ONLINE EXCLUSIVE</h2>
-        <h2>COLOR: <span class="colourSelected">Electric Red</span> </h2>
+        <h2>COLOR: <span class="colourSelected">No color selected</span> </h2>
         <section class="circlesColors">
-            <span class="dot" style="background-color: #c62930;"></span>
-            <span class="dot" style="background-color: #6327f4;"></span>
-            <span class="dot" style="background-color: black;"></span>
-            <span class="dot" style="background-color: white;"></span>
-            <span class="dot" style="background-color: #ef8130;"></span>
-            <span class="dot" style="background-color: #fef450;"></span>
-            <span class="dot" style="background-color: #1d53ae;"></span>
-            <span class="dot" style="background-color: #285a7b;"></span>
-            <span class="dot" style="background-color: #dab595;"></span>
-            <span class="dot" style="background-color: #54c0f9;"></span>
-            <span class="dot" style="background-color: #90fa4d;"></span>
-            <span class="dot" style="background-color: #ea37b3;"></span>
-            <span class="dot" style="background-color: #dab595;"></span>
-            <span class="dot" style="background-color: #418d65;"></span>
-            <span class="dot" style="background-color: #6f6975;"></span>
-            <span class="dot" style="background-color: #6e502b;"></span>
-            <span class="dot" style="background-color: #69dad1;"></span>
-            <span class="dot" style="background-color: #c4c4c4;"></span>
+            <span class="dot outside c1"><span class="dot inside" style="background-color: #c62930;"></span></span>
+            <span class="dot outside c2"><span class="dot inside " style="background-color: #6327f4;"></span></span>
+            <span class="dot outside c3"><span class="dot inside " style="background-color: black;"></span></span>
+            <span class="dot outside c4"><span class="dot inside " style="background-color: white;"></span></span>
+            <span class="dot outside c5"><span class="dot inside " style="background-color: #ef8130;"></span></span>
+            <span class="dot outside c6"><span class="dot inside " style="background-color: #fef450;"></span></span>
+            <span class="dot outside c7"><span class="dot inside " style="background-color: #1d53ae;"></span></span>
+            <span class="dot outside c8"><span class="dot inside " style="background-color: #285a7b;"></span></span>
+            <span class="dot outside c9"><span class="dot inside " style="background-color: #dab595;"></span></span>
+            <span class="dot outside c10"><span class="dot inside " style="background-color: #54c0f9;"></span></span>
+            <span class="dot outside c11"><span class="dot inside " style="background-color: #90fa4d;"></span></span>
+            <span class="dot outside c12"><span class="dot inside " style="background-color: #ea37b3;"></span></span>
+            <span class="dot outside c13"><span class="dot inside " style="background-color: #dab595;"></span></span>
+            <span class="dot outside c14"><span class="dot inside " style="background-color: #418d65;"></span></span>
+            <span class="dot outside c15"><span class="dot inside " style="background-color: #6f6975;"></span></span>
+            <span class="dot outside c16"><span class="dot inside " style="background-color: #6e502b;"></span></span>
+            <span class="dot outside c17"><span class="dot inside " style="background-color: #69dad1;"></span></span>
+            <span class="dot outside c18"><span class="dot inside " style="background-color: #c4c4c4;"></span></span>
         </section>
     </main>
     <section class="sizeSection">
@@ -62,7 +75,7 @@
     </section>
     <section class = "itemsDisplay">
         <span class="items"> 0</span>
-        <button class="btn cart">Add to Cart</button>
+        <button class="btn cart" id="cartBtn">Add to Cart</button>
     </section>
     <hr>
     <section>
@@ -73,10 +86,40 @@
         <h3>Need Help?</h3>
         <h3>Shipping & Returns</h3>
     </footer>
+        
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+          <div class="modal-header">
+            <span class="close">&times;</span>
+            <h2>Please add the quantity of the item you have selected</h2>
+          </div>
+          <div class="modal-body">
 
+            <p>Electric Red <div class="qty mt-5">
+                    <span class="minus bg-dark">-</span>
+                    <input type="number" class="count" name="qty" value="1">
+                    <span class="plus bg-dark">+</span>
+                </div>
+            </p>          
+          </div>
+          <div class="modal-footer">
+            <button class="modalButton agree">Agree</button>
+            <button class="modalButton cancel">Cancel</button>
+          </div>
+        </div>	      
+    </div>
 
-    
-
+    <!-- Modal JS -->
+    <script src="cartScript.js"></script>
+    <!-- JQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="script.js"></script>  <!-- Script for adding on click functionality to circles -->
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 </body>
 
 
