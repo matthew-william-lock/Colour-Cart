@@ -106,6 +106,7 @@ function onCircleC4() {
     $( ".c17" ).removeClass( "clicked" );
     $( ".c18" ).removeClass( "clicked" );
     $(".c4").toggleClass("clicked");
+    $(".colourSelected").html("White");
 }
 
 function onCircleC5() {
@@ -127,6 +128,7 @@ function onCircleC5() {
     $( ".c17" ).removeClass( "clicked" );
     $( ".c18" ).removeClass( "clicked" );
     $(".c5").toggleClass("clicked");
+    $(".colourSelected").html("Orange");
 }
 
 function onCircleC6() {
@@ -148,6 +150,7 @@ function onCircleC6() {
     $( ".c17" ).removeClass( "clicked" );
     $( ".c18" ).removeClass( "clicked" );
     $(".c6").toggleClass("clicked");
+    $(".colourSelected").html("Yummy Yellow");
 }
 
 function onCircleC7() {
@@ -169,6 +172,7 @@ function onCircleC7() {
     $( ".c17" ).removeClass( "clicked" );
     $( ".c18" ).removeClass( "clicked" );
     $(".c7").toggleClass("clicked");
+    $(".colourSelected").html("Lighter Blue");
 }
 
 function onCircleC8() {
@@ -190,6 +194,7 @@ function onCircleC8() {
     $( ".c17" ).removeClass( "clicked" );
     $( ".c18" ).removeClass( "clicked" );
     $(".c8").toggleClass("clicked");
+    $(".colourSelected").html("Darker Blue");
 }
 
 function onCircleC9() {
@@ -211,6 +216,7 @@ function onCircleC9() {
     $( ".c17" ).removeClass( "clicked" );
     $( ".c18" ).removeClass( "clicked" );
     $(".c9").toggleClass("clicked");
+    $(".colourSelected").html("Pale Colour");
 }
 
 function onCircleC10() {
@@ -232,6 +238,7 @@ function onCircleC10() {
     $( ".c17" ).removeClass( "clicked" );
     $( ".c18" ).removeClass( "clicked" );
     $(".c10").toggleClass("clicked");
+    $(".colourSelected").html("Sky Blue");
 }
 
 function onCircleC11() {
@@ -253,6 +260,7 @@ function onCircleC11() {
     $( ".c17" ).removeClass( "clicked" );
     $( ".c18" ).removeClass( "clicked" );
     $(".c11").toggleClass("clicked");
+    $(".colourSelected").html("Vomit Green");
 }
 
 function onCircleC12() {
@@ -274,6 +282,7 @@ function onCircleC12() {
     $( ".c17" ).removeClass( "clicked" );
     $( ".c18" ).removeClass( "clicked" );
     $(".c12").toggleClass("clicked");
+    $(".colourSelected").html("Pink");
 }
 
 function onCircleC13() {
@@ -295,6 +304,7 @@ function onCircleC13() {
     $( ".c17" ).removeClass( "clicked" );
     $( ".c18" ).removeClass( "clicked" );
     $(".c13").toggleClass("clicked");
+    $(".colourSelected").html("Ugle Pale");
 }
 
 function onCircleC14() {
@@ -316,6 +326,7 @@ function onCircleC14() {
     $( ".c17" ).removeClass( "clicked" );
     $( ".c18" ).removeClass( "clicked" );
     $(".c14").toggleClass("clicked");
+    $(".colourSelected").html("Pale Green");
 }
 
 function onCircleC15() {
@@ -337,6 +348,7 @@ function onCircleC15() {
     $( ".c17" ).removeClass( "clicked" );
     $( ".c18" ).removeClass( "clicked" );
     $(".c15").toggleClass("clicked");
+    $(".colourSelected").html("49th Shade Grey");
 }
 
 function onCircleC16() {
@@ -358,6 +370,7 @@ function onCircleC16() {
     $( ".c17" ).removeClass( "clicked" );
     $( ".c18" ).removeClass( "clicked" );
     $(".c16").toggleClass("clicked");
+    $(".colourSelected").html("Pale Brown");
 }
 
 function onCircleC17() {
@@ -379,6 +392,7 @@ function onCircleC17() {
     $( ".c16" ).removeClass( "clicked" );
     $( ".c18" ).removeClass( "clicked" );
     $(".c17").toggleClass("clicked");
+    $(".colourSelected").html("Another Blue");
 }
 
 function onCircleC18() {
@@ -400,4 +414,5 @@ function onCircleC18() {
     $( ".c16" ).removeClass( "clicked" );
     $( ".c17" ).removeClass( "clicked" );
     $(".c18").toggleClass("clicked");
+    $(".colourSelected").html("Light Grey");
 }

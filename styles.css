@@ -236,138 +236,8 @@ body,ul,li,h1,h2,a{
   padding: 0px 15px;
 }
 
-/* Media Queries */
-/* Applied when a screen is found to be less than 550px wide */
-/* Used for responsive website when viewed on mobile */
+/* MODAL CONTENT ===================================================================================================== */
 
-@media screen and (max-width: 680px){
-
-  /* Decrease padding of price items*/
-  main li{
-    display: inline-block;
-    margin-right: 60px;
-  }
-
-}
-
-@media screen and (max-width: 570px){
- 
-  /* Decrease font size of heading */
-  header h1{
-    margin-top: 30px;
-    font-size: 35px;
-  }
-
-  /* Change padding of reviews items */
-  .reviews ol{
-    padding: 10px;
-  }
-
-  /* Remove margin for number of ratings */
-  .reviews li{
-    margin: 0;
-  }
-
-  /* Scale star icons down */
-  .star{
-    transform: scale(1.2,1.2);  /* Scales size of the icon */
-    margin-right:5px;
-  }
-
-  /* Decrease padding of price items*/
-  main li{
-    display: inline-block;
-    margin-right: 1px;
-  }
-
-  /* Decrease banner padding and text size*/
-  body > main > h2.banner{
-  padding: 20px;
-  font-size: 15px;
-}
-
-/* Decrease font size of price options*/
-.discountedPrice{
-  font-size: 20px;
-}
-.originalPrice{
-  font-size: 15px;
-}
-/* Discount percentage styling */
-.discount{
-  font-size: 15px;
-}
-
-/* Change padding */
-body > main > h2.banner{
-  padding: 10px 15px;
-}
-
-/* Change padding */
-body > main > h2:nth-child(3){
-  padding: 5px 10px;
-}
-
-body > main > section{
-  padding: 10px 0;
-}
-
-/* Change size of dots*/
-.dot.inside {
-  width: 25px;
-  height: 25px;
-}
-
-.dot.outside{
-  width: 35px;
-  height: 35px;
-}
-
-/* Change ormat color selected text*/
-body > main > h2:nth-child(3){
-  font-size: 15px;
-}
-
-/* Format selected colour */
-body > main > h2:nth-child(3) > span{
-  font-weight: 300 ; /* Thinner font */
-}
-
-/* Styling for rectangle showing number of items in cart */
-body > section:nth-child(5) > span{
-  padding: 10px 20px;
-  margin-right: 20px;
-  font-size: 15px;
-}
-
-/* Styling for the Add to Cart button */
-.btn {
-  padding: 10px 50px; /* Add some padding */
-  font-size: 15px;
-}
-
-/* Change margin for horizontal line */
-hr{
-  margin: 20px 0;
-}
-
-/* Styling for footer */
-footer{
-  font-size: 10px;
-} 
-
-/* End of media query */
-
-}
-
-@media screen and (max-width: 350px){ 
-  /* Decrease font size of heading */
-  header h1{
-    margin-top: 30px;
-    font-size: 28px;
-  }
-
-}
 
 /* The Modal (background) */
 .modal {
@@ -424,6 +294,7 @@ footer{
   float: right;
   font-size: 28px;
   font-weight: bold;
+  margin-left: 5px;
 }
 
 .close:hover,
@@ -571,6 +442,183 @@ input:disabled{
   border: 2px solid #B79297;
   
 }
+
+/* Media Queries  ========================================================================================================================*/
+/* Applied when a screen is found to be less than 550px wide */
+/* Used for responsive website when viewed on mobile */
+
+@media screen and (max-width: 680px){
+
+  /* Decrease padding of price items*/
+  main li{
+    display: inline-block;
+    margin-right: 60px;
+  }
+
+}
+
+@media screen and (max-width: 570px){
+ 
+  /* Decrease font size of heading */
+  header h1{
+    margin-top: 30px;
+    font-size: 35px;
+  }
+
+  /* Change padding of reviews items */
+  .reviews ol{
+    padding: 10px;
+  }
+
+  /* Remove margin for number of ratings */
+  .reviews li{
+    margin: 0;
+  }
+
+  /* Scale star icons down */
+  .star{
+    transform: scale(1.2,1.2);  /* Scales size of the icon */
+    margin-right:5px;
+  }
+
+  /* Decrease padding of price items*/
+  main li{
+    display: inline-block;
+    margin-right: 1px;
+  }
+
+  /* Decrease banner padding and text size*/
+  body > main > h2.banner{
+  padding: 20px;
+  font-size: 15px;
+}
+
+/* Decrease font size of price options*/
+.discountedPrice{
+  font-size: 20px;
+}
+.originalPrice{
+  font-size: 15px;
+}
+/* Discount percentage styling */
+.discount{
+  font-size: 15px;
+}
+
+/* Change padding */
+body > main > h2.banner{
+  padding: 10px 15px;
+}
+
+/* Change padding */
+body > main > h2:nth-child(3){
+  padding: 5px 10px;
+}
+
+body > main > section{
+  padding: 10px 0;
+}
+
+/* Change size of dots*/
+.dot.inside {
+  width: 25px;
+  height: 25px;
+}
+
+.dot.outside{
+  width: 35px;
+  height: 35px;
+}
+
+/* Change ormat color selected text*/
+body > main > h2:nth-child(3){
+  font-size: 15px;
+}
+
+/* Format selected colour */
+body > main > h2:nth-child(3) > span{
+  font-weight: 300 ; /* Thinner font */
+}
+
+/* Styling for rectangle showing number of items in cart */
+body > section:nth-child(5) > span{
+  padding: 10px 20px;
+  margin-right: 20px;
+  font-size: 15px;
+}
+
+/* Styling for the Add to Cart button */
+.btn {
+  padding: 10px 50px; /* Add some padding */
+  font-size: 15px;
+}
+
+/* Change margin for horizontal line */
+hr{
+  margin: 20px 0;
+}
+
+/* Styling for footer */
+footer{
+  font-size: 10px;
+}
+
+.modal-header h2{
+  font-size: 8px;
+}
+
+.close {
+  font-size: 10px;
+}
+
+#myModal > div > div.modal-body > p{
+  font-size: 15px;
+}
+
+.qty .count {
+  font-size: 20px;
+}
+.qty .plus {
+  width: 20px;
+  height: 20px;
+  font: 20px/1 Arial,sans-serif;
+  }
+.qty .minus {
+  width: 20px;
+  height: 20px;
+  font: 20px/1 Arial,sans-serif;
+}
+
+#myModal > div > div.modal-body > div{
+  margin: 15px 0;
+}
+
+.modalButton {
+  border: none;
+  color: black;
+  padding: 8px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 10px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 12px;
+}
+
+/* End of media query */
+
+}
+
+@media screen and (max-width: 350px){ 
+  /* Decrease font size of heading */
+  header h1{
+    margin-top: 30px;
+    font-size: 28px;
+  }
+
+}
+
 
 
        
