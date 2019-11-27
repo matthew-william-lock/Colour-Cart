@@ -78,8 +78,11 @@
         <button class="btn cart" id="cartBtn">Add to Cart</button>
     </section>
     <hr>
-    <section>
+    <section id = "details">
         <h2>DETAILS</h2>
+        <section id="cart">
+        </section>
+
     </section>
     <hr>
     <footer>
@@ -97,14 +100,14 @@
           <div class="modal-body">
 
             <p>Electric Red <div class="qty mt-5">
-                    <span class="minus bg-dark">-</span>
+                <span class="minus bg-dark">-</span>
                     <input type="number" class="count" name="qty" value="1">
-                    <span class="plus bg-dark">+</span>
-                </div>
+                <span class="plus bg-dark">+</span>
+            </div>
             </p>          
           </div>
           <div class="modal-footer">
-            <button class="modalButton agree">Agree</button>
+            <button class="modalButton agree" onclick="addColours()" > Agree </button>
             <button class="modalButton cancel">Cancel</button>
           </div>
         </div>	      

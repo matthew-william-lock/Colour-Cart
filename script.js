@@ -1,5 +1,11 @@
-// On click border functionality
+/* Author : Matthew Lock
+Date : 20 November 2019
+Website : https://colourcart.000webhostapp.com/ */
 
+// This script was made for the sole purpose of adding selctioning 
+// functionality to the circles found in index.html
+
+// Setting onClick border functionality
 $(".c1").click(onCircleC1);
 $(".c2").click(onCircleC2);
 $(".c3").click(onCircleC3);
