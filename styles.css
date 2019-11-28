@@ -68,6 +68,7 @@ main li{
 /* Discounted price styling */
 /* Increased font size, added shaddows */
 .discountedPrice{
+  position: relative;
   color: #d15567;
   font-size: 30px;
   font-weight: 600;
@@ -78,6 +79,7 @@ main li{
 /* Original price styling */
 /* Increased font size, added shaddows */
 .originalPrice{
+  position: relative;
   font-weight: 700 ;
   font-size: 20px;
   color:#c8c8c8;
@@ -233,6 +235,23 @@ body > section:nth-child(7) > h2{
   padding: 0 15px;
 }
 
+/* Align checout button right */
+.checkout{
+  text-align: right;  
+}
+
+.checkout.btn.cart{
+  margin: 0 0;
+  display: none;
+  padding: 10px 25px; /* Add some padding */
+  font-size: 15px;
+}
+
+/* Show checkout button */
+.checkout.btn.cart.display{
+  display: inline-block;
+}
+
 /* Styling for footer */
 footer{
   font-size: 13px;
@@ -243,7 +262,7 @@ body,ul,li,h1,h2,a{
   padding: 0px 15px;
 }
 
-/* MODAL CONTENT ===================================================================================================== */
+/* ADD TO CART MODAL CONTENT ===================================================================================================== */
 
 
 /* The Modal (background) */
@@ -334,6 +353,42 @@ body,ul,li,h1,h2,a{
   text-align: right;
   padding-right: 45px;
 }
+
+/* End of general model styling ================================================================================================ */
+
+
+/* CHECKOUT CART MODAL CONTENT ===================================================================================================== */
+
+.modal-header.checkout{
+  padding: 20px;
+  text-align: left;
+  padding-bottom: 10px;
+}
+
+#checkoutModal > div > div.modal-header.checkout > h2 > span{
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  text-align: right;
+}
+
+#checkoutModal > div > div.modal-footer > button{
+  padding: 10px 40px;
+}
+
+.modal-body.checkout{
+  text-align: left;
+}
+
+.modal-body.checkout h1{
+  font-size: 20px;
+}
+
+.modal hr{
+  width: 90%;
+  margin: 10px auto;
+}
+
 
 /* End of general model styling ================================================================================================ */
 
@@ -652,6 +707,7 @@ footer{
   background-color: rgba(255, 0, 0, 0.808);
   border-color: rgba(255, 0, 0, 0.808);  
   animation-name: shakeAnim;
+  onclo
 }
 
 @keyframes shakeAnim {

@@ -53,24 +53,24 @@
         <h2 class="banner">ONLINE EXCLUSIVE</h2>
         <h2>COLOR: <span class="colourSelected">No color selected</span> </h2>
         <section class="circlesColors">
-            <span class="dot outside c1"><span class="dot inside" style="background-color: #c62930;"></span></span>
-            <span class="dot outside c2"><span class="dot inside " style="background-color: #6327f4;"></span></span>
-            <span class="dot outside c3"><span class="dot inside " style="background-color: black;"></span></span>
-            <span class="dot outside c4"><span class="dot inside " style="background-color: white;"></span></span>
-            <span class="dot outside c5"><span class="dot inside " style="background-color: #ef8130;"></span></span>
-            <span class="dot outside c6"><span class="dot inside " style="background-color: #fef450;"></span></span>
-            <span class="dot outside c7"><span class="dot inside " style="background-color: #1d53ae;"></span></span>
-            <span class="dot outside c8"><span class="dot inside " style="background-color: #285a7b;"></span></span>
-            <span class="dot outside c9"><span class="dot inside " style="background-color: #dab595;"></span></span>
-            <span class="dot outside c10"><span class="dot inside " style="background-color: #54c0f9;"></span></span>
-            <span class="dot outside c11"><span class="dot inside " style="background-color: #90fa4d;"></span></span>
-            <span class="dot outside c12"><span class="dot inside " style="background-color: #ea37b3;"></span></span>
-            <span class="dot outside c13"><span class="dot inside " style="background-color: #dab595;"></span></span>
-            <span class="dot outside c14"><span class="dot inside " style="background-color: #418d65;"></span></span>
-            <span class="dot outside c15"><span class="dot inside " style="background-color: #6f6975;"></span></span>
-            <span class="dot outside c16"><span class="dot inside " style="background-color: #6e502b;"></span></span>
-            <span class="dot outside c17"><span class="dot inside " style="background-color: #69dad1;"></span></span>
-            <span class="dot outside c18"><span class="dot inside " style="background-color: #c4c4c4;"></span></span>
+            <span class="dot outside c1"><span class="dot inside" style="background-color: #c62930;" onmouseover="setText1()" onmouseout="resetText()" ></span></span>
+            <span class="dot outside c2"><span class="dot inside " style="background-color: #6327f4;" onmouseover="setText2()" onmouseout="resetText()" ></span></span>
+            <span class="dot outside c3"><span class="dot inside " style="background-color: black;" onmouseover="setText3()" onmouseout="resetText()"></span></span>
+            <span class="dot outside c4"><span class="dot inside " style="background-color: white;" onmouseover="setText4()" onmouseout="resetText()"></span></span>
+            <span class="dot outside c5"><span class="dot inside " style="background-color: #ef8130;" onmouseover="setText5()" onmouseout="resetText()"></span></span>
+            <span class="dot outside c6"><span class="dot inside " style="background-color: #fef450;" onmouseover="setText6()" onmouseout="resetText()"></span></span>
+            <span class="dot outside c7"><span class="dot inside " style="background-color: #1d53ae;" onmouseover="setText7()" onmouseout="resetText()"></span></span>
+            <span class="dot outside c8"><span class="dot inside " style="background-color: #285a7b;" onmouseover="setText8()" onmouseout="resetText()"></span></span>
+            <span class="dot outside c9"><span class="dot inside " style="background-color: #dab595;" onmouseover="setText9()" onmouseout="resetText()"></span></span>
+            <span class="dot outside c10"><span class="dot inside " style="background-color: #54c0f9;" onmouseover="setText10()" onmouseout="resetText()"></span></span>
+            <span class="dot outside c11"><span class="dot inside " style="background-color: #90fa4d;" onmouseover="setText11()" onmouseout="resetText()"></span></span>
+            <span class="dot outside c12"><span class="dot inside " style="background-color: #ea37b3;" onmouseover="setText12()" onmouseout="resetText()"></span></span>
+            <span class="dot outside c13"><span class="dot inside " style="background-color: #dab595;" onmouseover="setText13()" onmouseout="resetText()"></span></span>
+            <span class="dot outside c14"><span class="dot inside " style="background-color: #418d65;" onmouseover="setText14()" onmouseout="resetText()"></span></span>
+            <span class="dot outside c15"><span class="dot inside " style="background-color: #6f6975;" onmouseover="setText15()" onmouseout="resetText()"></span></span>
+            <span class="dot outside c16"><span class="dot inside " style="background-color: #6e502b;" onmouseover="setText16()" onmouseout="resetText()"></span></span>
+            <span class="dot outside c17"><span class="dot inside " style="background-color: #69dad1;" onmouseover="setText17()" onmouseout="resetText()"></span></span>
+            <span class="dot outside c18"><span class="dot inside " style="background-color: #c4c4c4;" onmouseover="setText18()" onmouseout="resetText()"></span></span>
         </section>
     </main>
     <section class="sizeSection">
@@ -87,7 +87,9 @@
         <section id="cart" class="detailsList">
             <!-- <span class="dot outside c1"><span class="dot inside" style="background-color: orange   ;"></span></span> -->
         </section>
-
+        <section class ="checkout">
+            <button class="checkout btn cart" id="checkoutBtn">Checkout Now</button>
+        </section>        
     </section>
     <hr>
     <footer>
@@ -95,7 +97,7 @@
         <h3>Shipping & Returns</h3>
     </footer>
         
-    <!-- The Modal -->
+    <!-- Add to cart modal =====================================================================================================================-->
     <div id="myModal" class="modal">
         <div class="modal-content">
           <div class="modal-header">
@@ -118,6 +120,24 @@
           </div>
         </div>	      
     </div>
+    <!-- ====================================================================================================================================== -->
+
+    <!-- Checkout modal =====================================================================================================================-->
+    <div id="checkoutModal" class="modal">
+            <div class="modal-content">
+              <div class="modal-header checkout">                
+                <h1>Checkout <span class="close">&times;</span></h1>
+              </div>
+              <hr>
+              <div class="modal-body checkout" id="checkoutList">        
+              </div>
+              <div class="modal-footer">
+                <button class="modalButton agree confirm" onclick="reloadPage()"> Confirm </button>
+              </div>
+            </div>	      
+        </div>
+
+    <!-- ====================================================================================================================================== -->
 
     <!-- Modal JS -->
     <script src="cartScript.js"></script>

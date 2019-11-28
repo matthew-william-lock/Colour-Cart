@@ -50,10 +50,16 @@ function onCircleC1() {
     $( ".c17" ).removeClass( "clicked" );
     $( ".c18" ).removeClass( "clicked" );
     $(".c1").toggleClass("clicked");
-    $(".colourSelected").html("Electric Red");  // Change text to show selected colour
-    selectedColour = "#c62930";                 // Global variable indicates what colour is selected
-    selectedColourName = "Electric Red";        // Global variable -name of selected colour
-    enableButton();                             // Enable selected global variable
+    $(".colourSelected").html("Electric Red");                  // Change text to show selected colour
+    selectedColour = "#c62930";                                 // Global variable indicates what colour is selected
+    selectedColourName = "Electric Red";                        // Global variable -name of selected colour
+    enableButton();                                             // Enable selected global variable
+    undsicountedPrice=c1;                                       // Set the undiscounted price
+    newPrice = (undsicountedPrice*0.75).toFixed(2);             // Set Discounted price
+    if (shoppingCart.length<1) {
+        tempTextUndsicountedPrice = "$"+undsicountedPrice;          // Set temp variables
+        tempTextDsicountedPrice = "$"+newPrice;
+    }    
 }
 
 function onCircleC2() {
@@ -79,7 +85,12 @@ function onCircleC2() {
     selectedColour = "#6327f4";
     selectedColourName = "Powerful Purple";
     enableButton(); 
-    
+    undsicountedPrice=c2;                                       // Set the undiscounted price
+    newPrice = (undsicountedPrice*0.75).toFixed(2);             // Set Discounted price
+    if (shoppingCart.length<1) {
+        tempTextUndsicountedPrice = "$"+undsicountedPrice;          // Set temp variables
+        tempTextDsicountedPrice = "$"+newPrice;
+    }  
 }
 
 function onCircleC3() {
@@ -105,6 +116,12 @@ function onCircleC3() {
     selectedColour = "black";
     selectedColourName = "Black";  
     enableButton(); 
+    undsicountedPrice=c3;                                       // Set the undiscounted price
+    newPrice = (undsicountedPrice*0.75).toFixed(2);             // Set Discounted price
+    if (shoppingCart.length<1) {
+        tempTextUndsicountedPrice = "$"+undsicountedPrice;          // Set temp variables
+        tempTextDsicountedPrice = "$"+newPrice;
+    }  
 }
 
 function onCircleC4() {
@@ -130,6 +147,12 @@ function onCircleC4() {
     selectedColour = "white";
     selectedColourName = "White";
     enableButton(); 
+    undsicountedPrice=c4;                                       // Set the undiscounted price
+    newPrice = (undsicountedPrice*0.75).toFixed(2);             // Set Discounted price
+    if (shoppingCart.length<1) {
+        tempTextUndsicountedPrice = "$"+undsicountedPrice;          // Set temp variables
+        tempTextDsicountedPrice = "$"+newPrice;
+    } 
 }
 
 function onCircleC5() {
@@ -155,6 +178,12 @@ function onCircleC5() {
     selectedColour = "#ef8130";
     selectedColourName = "Orange";
     enableButton(); 
+    undsicountedPrice=c5;                                       // Set the undiscounted price
+    newPrice = (undsicountedPrice*0.75).toFixed(2);             // Set Discounted price
+    if (shoppingCart.length<1) {
+        tempTextUndsicountedPrice = "$"+undsicountedPrice;          // Set temp variables
+        tempTextDsicountedPrice = "$"+newPrice;
+    } 
 }
 
 function onCircleC6() {
@@ -180,6 +209,12 @@ function onCircleC6() {
     selectedColour = "#fef450";
     selectedColourName = "Yummy Yellow";
     enableButton(); 
+    undsicountedPrice=c6;                                       // Set the undiscounted price
+    newPrice = (undsicountedPrice*0.75).toFixed(2);             // Set Discounted price
+    if (shoppingCart.length<1) {
+        tempTextUndsicountedPrice = "$"+undsicountedPrice;          // Set temp variables
+        tempTextDsicountedPrice = "$"+newPrice;
+    }   
 }
 
 function onCircleC7() {
@@ -205,6 +240,12 @@ function onCircleC7() {
     selectedColour = "#1d53ae";
     selectedColourName = "Lighter Blue";
     enableButton(); 
+    undsicountedPrice=c7;                                       // Set the undiscounted price
+    newPrice = (undsicountedPrice*0.75).toFixed(2);             // Set Discounted price
+    if (shoppingCart.length<1) {
+        tempTextUndsicountedPrice = "$"+undsicountedPrice;          // Set temp variables
+        tempTextDsicountedPrice = "$"+newPrice;
+    } 
 }
 
 function onCircleC8() {
@@ -230,6 +271,12 @@ function onCircleC8() {
     selectedColour = "#285a7b";
     selectedColourName = "Darker Blue";
     enableButton(); 
+    undsicountedPrice=c8;                                       // Set the undiscounted price
+    newPrice = (undsicountedPrice*0.75).toFixed(2);             // Set Discounted price
+    if (shoppingCart.length<1) {
+        tempTextUndsicountedPrice = "$"+undsicountedPrice;          // Set temp variables
+        tempTextDsicountedPrice = "$"+newPrice;
+    } 
 }
 
 function onCircleC9() {
@@ -255,6 +302,12 @@ function onCircleC9() {
     selectedColour = "#dab595";
     selectedColourName = "Pale Colour";
     enableButton(); 
+    undsicountedPrice=c9;                                       // Set the undiscounted price
+    newPrice = (undsicountedPrice*0.75).toFixed(2);             // Set Discounted price
+    if (shoppingCart.length<1) {
+        tempTextUndsicountedPrice = "$"+undsicountedPrice;          // Set temp variables
+        tempTextDsicountedPrice = "$"+newPrice;
+    } 
 }
 
 function onCircleC10() {
@@ -280,6 +333,12 @@ function onCircleC10() {
     selectedColour = "#54c0f9";
     selectedColourName = "Sky Blue";
     enableButton(); 
+    undsicountedPrice=c10;                                       // Set the undiscounted price
+    newPrice = (undsicountedPrice*0.75).toFixed(2);             // Set Discounted price
+    if (shoppingCart.length<1) {
+        tempTextUndsicountedPrice = "$"+undsicountedPrice;          // Set temp variables
+        tempTextDsicountedPrice = "$"+newPrice;
+    } 
 }
 
 function onCircleC11() {
@@ -305,6 +364,12 @@ function onCircleC11() {
     selectedColour = "#90fa4d";
     selectedColourName = "Vomit Green";
     enableButton(); 
+    undsicountedPrice=c11;                                       // Set the undiscounted price
+    newPrice = (undsicountedPrice*0.75).toFixed(2);             // Set Discounted price
+    if (shoppingCart.length<1) {
+        tempTextUndsicountedPrice = "$"+undsicountedPrice;          // Set temp variables
+        tempTextDsicountedPrice = "$"+newPrice;
+    } 
 }
 
 function onCircleC12() {
@@ -330,6 +395,12 @@ function onCircleC12() {
     selectedColour = "#ea37b3";
     selectedColourName = "Pink";
     enableButton(); 
+    undsicountedPrice=c12;                                       // Set the undiscounted price
+    newPrice = (undsicountedPrice*0.75).toFixed(2);             // Set Discounted price
+    if (shoppingCart.length<1) {
+        tempTextUndsicountedPrice = "$"+undsicountedPrice;          // Set temp variables
+        tempTextDsicountedPrice = "$"+newPrice;
+    } 
 }
 
 function onCircleC13() {
@@ -355,6 +426,12 @@ function onCircleC13() {
     selectedColour = "#dab595";
     selectedColourName = "Ugle Pale";
     enableButton(); 
+    undsicountedPrice=c13;                                       // Set the undiscounted price
+    newPrice = (undsicountedPrice*0.75).toFixed(2);             // Set Discounted price
+    if (shoppingCart.length<1) {
+        tempTextUndsicountedPrice = "$"+undsicountedPrice;          // Set temp variables
+        tempTextDsicountedPrice = "$"+newPrice;
+    } 
 }
 
 function onCircleC14() {
@@ -380,6 +457,12 @@ function onCircleC14() {
     selectedColour = "#418d65";    
     selectedColourName = "Pale Green";
     enableButton(); 
+    undsicountedPrice=c14;                                       // Set the undiscounted price
+    newPrice = (undsicountedPrice*0.75).toFixed(2);             // Set Discounted price
+    if (shoppingCart.length<1) {
+        tempTextUndsicountedPrice = "$"+undsicountedPrice;          // Set temp variables
+        tempTextDsicountedPrice = "$"+newPrice;
+    } 
 }
 
 function onCircleC15() {
@@ -405,6 +488,12 @@ function onCircleC15() {
     selectedColour = "#6f6975"; 
     selectedColourName = "49th Shade Grey"; 
     enableButton(); 
+    undsicountedPrice=c15;                                       // Set the undiscounted price
+    newPrice = (undsicountedPrice*0.75).toFixed(2);             // Set Discounted price
+    if (shoppingCart.length<1) {
+        tempTextUndsicountedPrice = "$"+undsicountedPrice;          // Set temp variables
+        tempTextDsicountedPrice = "$"+newPrice;
+    } 
 }
 
 function onCircleC16() {
@@ -430,6 +519,12 @@ function onCircleC16() {
     selectedColour = "#6e502b"; 
     selectedColourName = "Pale Brown"; 
     enableButton(); 
+    undsicountedPrice=c16;                                       // Set the undiscounted price
+    newPrice = (undsicountedPrice*0.75).toFixed(2);             // Set Discounted price
+    if (shoppingCart.length<1) {
+        tempTextUndsicountedPrice = "$"+undsicountedPrice;          // Set temp variables
+        tempTextDsicountedPrice = "$"+newPrice;
+    } 
 }
 
 function onCircleC17() {
@@ -455,6 +550,12 @@ function onCircleC17() {
     selectedColour = "#69dad1"; 
     selectedColourName = "Another Blue";
     enableButton(); 
+    undsicountedPrice=c17;                                       // Set the undiscounted price
+    newPrice = (undsicountedPrice*0.75).toFixed(2);             // Set Discounted price
+    if (shoppingCart.length<1) {
+        tempTextUndsicountedPrice = "$"+undsicountedPrice;          // Set temp variables
+        tempTextDsicountedPrice = "$"+newPrice;
+    } 
 }
 
 function onCircleC18() {
@@ -480,4 +581,10 @@ function onCircleC18() {
     selectedColour = "#c4c4c4"; 
     selectedColourName = "Light Grey"; 
     enableButton(); 
+    undsicountedPrice=c18;                                       // Set the undiscounted price
+    newPrice = (undsicountedPrice*0.75).toFixed(2);             // Set Discounted price
+    if (shoppingCart.length<1) {
+        tempTextUndsicountedPrice = "$"+undsicountedPrice;          // Set temp variables
+        tempTextDsicountedPrice = "$"+newPrice;
+    } 
 }
