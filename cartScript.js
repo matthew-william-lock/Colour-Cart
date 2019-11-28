@@ -160,7 +160,7 @@ checkoutbtn.onclick=function(){
   blank.style="display:inline-block; width:28%";
 
   var total = document.createElement("h1");
-  total.innerText = "$"+totalDiscountedPrice;
+  total.innerText = "$ "+totalDiscountedPrice;
   total.style="display:inline-block; width:28%";
 
   info.appendChild(totalItem);
