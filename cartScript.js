@@ -51,7 +51,7 @@ $(document).ready(function(){
 function addColours() {
 
   // Remove all objects currently added to cart
-  var section = document.getElementById("details");
+  var section = document.getElementById("cart");
   while (section.firstChild) {
     section.removeChild(section.firstChild);
   }
@@ -59,18 +59,21 @@ function addColours() {
   var count = $('.count').val();
   var i ;
   for (i = 0; i < count; i++) {
+    // Add items in cart to details
     var section = document.getElementById("details");
-    var para = document.createElement("P");
-    para.innerText = "This is a paragraph.";
-    section.appendChild(para);
+    var circle = document.createElement("SPAN");
+    circle.classList="dot outside nohover";
+    var innerCircle = document.createElement("SPAN");
+    innerCircle.classList="dot inside nohover";
+    innerCircle.style="background-color:red"
+    circle.appendChild(innerCircle);
+    section.appendChild(circle);
   }
 
   // Checkout
   if ($('.count').val() > 0) {
     $(".btn").html("Checkout Now"); //Change text to checkout
-
     // Change button to redirect to checkout page
-
     btn.onclick = function() {
       location.href = "checkout.html";
     }
